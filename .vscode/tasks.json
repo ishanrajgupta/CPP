@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run C++ (Git Bash)",
+      "type": "shell",
+      "command": "g++ \"${fileBasename}\" -o \"${fileBasenameNoExtension}.exe\" && ./${fileBasenameNoExtension}.exe",
+      "options": {
+        "cwd": "${fileDirname}",
+        "shell": {
+          "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+          "args": ["--login", "-c"]
+        }
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "echo": false,
+        "showReuseMessage": false
+      }
+    }
+  ]
+}
